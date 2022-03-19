@@ -1,0 +1,24 @@
+{
+  "name": "오늘 전장",
+  "description": "파이널판타지14 pvp 전장 일정을 알려줍니다.",
+  "version": "1.0.1",
+  "manifest_version": 3,
+	"background": {
+		"service_worker": "/js/background.js"
+	},
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/favicon-16x16.png",
+      "32": "/images/favicon-32x32.png",
+      "96": "/images/favicon-96x96.png"
+    }
+  },
+  "icons": {
+		"16": "/images/favicon-16x16.png",
+		"32": "/images/favicon-32x32.png",
+		"96": "/images/favicon-96x96.png"
+  }
+
+}
