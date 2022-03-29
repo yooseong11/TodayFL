@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com/">
-<title>오늘 전장</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com/">
+	<title>오늘 전장</title>
 
-<link rel="stylesheet" href="font.css">
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/index.css" >
 
-<script src="./js/moment.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-
+	<script src="./js/moment.js"></script>
+	
+	<style>
+		#contentsWrapper>*:hover {
+			transition: all .3s;
+			transform: translateY(-5px);
+		}
+	</style>
 </head>
 
 <body>
 	<div id="wrapper" class="box-border bg-slate-200 p-4" style="width: 400px;">
+		<header>
+			<div class="px-4  flex justify-between">
+				<p id="date" class="text-sm text-slate-500"></p>
+				<a class="block text-blue-600 " href="https://ffxivblog.tistory.com/entry/%EB%89%B4%EB%B9%84%EB%8A%94-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EC%A0%84%EC%9E%A5-%EB%A7%A4%EC%B9%AD-%ED%8C%81" target="_blank" title="뉴비는 모르는 매칭 팁 보러가기">			
+					↗
+				</a>
+			</div>
+		</header>
 		<main id="main" class="select-none">
-			<ul class="flex flex-wrap w-full">
+			<ul id="contentsWrapper" class="flex flex-wrap w-full">
 				<li class="basis-full">
-					<div class="bg-white p-4 m-2 rounded">
+					<div class="bg-white p-4  m-2 rounded drop-shadow">
 						<div class="flex">
-							<div class="bg-blue-600 px-2 rounded mr-4 text-white">순서</div> 
-							<ul id="FLlist"class="flex">
+							<div class="bg-blue-600 px-2 rounded mr-4 text-white ">순서</div>
+							<ul id="FLlist" class="flex">
 								<li class="mr-2">제압 →</li>
 								<li class="mr-2">봉바 →</li>
 								<li class="mr-2">쇄빙 →</li>
@@ -30,7 +46,7 @@
 					</div>
 				</li>
 				<li class="basis-1/2">
-					<div class="bg-white p-4 m-2 rounded">
+					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="text-center">
 							<p class="text-slate-700">오늘은?</p>
 							<p id="todayFL" class="text-xl text-blue-600 font-bold">봉인된 바위섬</p>
@@ -38,7 +54,7 @@
 					</div>
 				</li>
 				<li class="basis-1/2">
-					<div class="bg-white p-4 m-2 rounded">
+					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="text-center">
 							<p class="text-slate-700">내일은?</p>
 							<p id="tomorrowFL" class="text-xl">봉인된 바위섬</p>
@@ -47,12 +63,8 @@
 				</li>
 			</ul>
 		</main>
-		<footer>
-			<div class="px-4 py-2 text-right">
-						<p id="date" class="text-sm text-slate-500"></p> 
-					</div>
-		</footer>
 	</div>
 	<script src="./js/main.js"></script>
 </body>
+
 </html>
