@@ -1,7 +1,7 @@
 {
   "name": "오늘 전장",
   "description": "파이널판타지14 pvp 전장 일정을 알려줍니다.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "manifest_version": 3,
 	"background": {
 		"service_worker": "/js/background.js"
