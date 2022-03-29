@@ -21,19 +21,22 @@
 </head>
 
 <body>
-	<div id="wrapper" class="box-border bg-slate-200 p-4" style="width: 400px;">
-		<header>
+	<div id="wrapper" class="box-border bg-slate-200 p-4 text-base" style="width: 400px;">
+		<header id="header" class="mb-4">
 			<div class="px-4  flex justify-between">
 				<p id="date" class="text-sm text-slate-500"></p>
-				<a class="block text-blue-600 " href="https://ffxivblog.tistory.com/entry/%EB%89%B4%EB%B9%84%EB%8A%94-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EC%A0%84%EC%9E%A5-%EB%A7%A4%EC%B9%AD-%ED%8C%81" target="_blank" title="뉴비는 모르는 매칭 팁 보러가기">			
-					↗
+				<a class="flex" href="https://ffxivblog.tistory.com/entry/%EB%89%B4%EB%B9%84%EB%8A%94-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EC%A0%84%EC%9E%A5-%EB%A7%A4%EC%B9%AD-%ED%8C%81"  target="_blank" title="뉴비는 모르는 매칭 팁 보러가기">
+					<div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded px-3 text-sm flex items-center mr-2">매칭팁 보러가기</div>
+					<div class="block text-blue-600 " >			
+						↗
+					</div>
 				</a>
 			</div>
 		</header>
 		<main id="main" class="select-none">
 			<ul id="contentsWrapper" class="flex flex-wrap w-full">
 				<li class="basis-full">
-					<div class="bg-white p-4  m-2 rounded drop-shadow">
+					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="flex">
 							<div class="bg-blue-600 px-2 rounded mr-4 text-white ">순서</div>
 							<ul id="FLlist" class="flex">
