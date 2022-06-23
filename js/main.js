@@ -1,18 +1,20 @@
 const frontlineList = ["제압", "봉바", "쇄빙", "온살"]
 
 
-const getFLturn = (firstDay, secondDay) => {
-	return FLtrun = Math.abs(secondDay.diff(firstDay,'days') % frontlineList.length)
+const getFLturn = (wantToKnowDay, defaultDay) => {
+	return (FLtrun = Math.abs(
+    defaultDay.diff(wantToKnowDay, "days") % frontlineList.length
+  ));
 }
 
 const getTodayturn = () => {
 	const today = moment()
 	const defalutDay = moment('2022-03-16')
-	return getFLturn(today,defalutDay)
+	return getFLturn(today, defalutDay)
 }
 
-const getTomorrowTrun = (todayTurn) => {
-	let tomorrowTurn = todayTurn + 1
+const getTomorrowTrun = (defaultTurn) => {
+	let tomorrowTurn = defaultTurn + 1
 	tomorrowTurn > frontlineList.length - 1 && (tomorrowTurn = 0)
 	return tomorrowTurn
 }
@@ -21,14 +23,31 @@ const getFLName = (int) => {
 	return frontlineList[int]
 }
 
+
+const changeUI = function (todayFL, tomorrowFL) {
+  document.getElementById("todayFL").textContent = todayFL;
+  document.getElementById("tomorrowFL").textContent = tomorrowFL;
+};
+
+const onChangeDateInput = function (e) {
+  const changedDay = e.target.value;
+  const defalutDay = moment("2022-03-16");
+  const selectedTurn = getFLturn(changedDay, defalutDay);
+  const selectedTmrTrun = getTomorrowTrun(selectedTurn);
+  changeUI(getFLName(selectedTurn), getFLName(selectedTmrTrun));
+};
+
 const init = function() {
 	const today = moment();
+	const dateUI = document.getElementById("date")
+	dateUI.value =today.format("yyyy-MM-DD");
+	
 	const todayTurn = getTodayturn();
 	const tomorrowTurn = getTomorrowTrun(todayTurn);
-	
-	document.getElementById("todayFL").textContent = getFLName(todayTurn);
-	document.getElementById("tomorrowFL").textContent = getFLName(tomorrowTurn);
-	document.getElementById("date").textContent = today.format("MM월 DD일");
+	changeUI(getFLName(todayTurn), getFLName(tomorrowTurn));
+	dateUI.addEventListener("change", onChangeDateInput);
 }
 
 init();
+
+
