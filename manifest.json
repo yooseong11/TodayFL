@@ -3,7 +3,6 @@
   "description": "파이널판타지14 pvp 전장 일정을 알려줍니다.",
   "version": "1.0.4",
   "manifest_version": 3,
-  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

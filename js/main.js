@@ -15,14 +15,17 @@ const getTodayturn = () => {
 
 const getTomorrowTrun = (defaultTurn) => {
 	let tomorrowTurn = defaultTurn + 1
-	tomorrowTurn > frontlineList.length - 1 && (tomorrowTurn = 0)
+
+	if (tomorrowTurn > frontlineList.length - 1) {
+		tomorrowTurn = 0
+	}
+
 	return tomorrowTurn
 }
 
 const getFLName = (int) => {
 	return frontlineList[int]
 }
-
 
 const changeUI = function (todayFL, tomorrowFL) {
   document.getElementById("todayFL").textContent = todayFL;
