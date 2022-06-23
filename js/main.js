@@ -21,8 +21,14 @@ const getFLName = (int) => {
 	return frontlineList[int]
 }
 
-const todayTurn = getTodayturn()
-const tomorrowTurn = getTomorrowTrun(todayTurn)
-document.querySelector("#todayFL").textContent = getFLName(todayTurn)
-document.querySelector("#tomorrowFL").textContent = getFLName(tomorrowTurn)
-document.querySelector("#date").textContent = today.format('MM월 D일')
+const init = function() {
+	const today = moment();
+	const todayTurn = getTodayturn();
+	const tomorrowTurn = getTomorrowTrun(todayTurn);
+	
+	document.getElementById("todayFL").textContent = getFLName(todayTurn);
+	document.getElementById("tomorrowFL").textContent = getFLName(tomorrowTurn);
+	document.getElementById("date").textContent = today.format("MM월 DD일");
+}
+
+init();

@@ -10,14 +10,6 @@
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/index.css" >
 
-	<script src="./js/moment.js"></script>
-	
-	<style>
-		#contentsWrapper>*:hover {
-			transition: all .3s;
-			transform: translateY(-5px);
-		}
-	</style>
 </head>
 
 <body>
@@ -35,7 +27,7 @@
 		</header>
 		<main id="main" class="select-none">
 			<ul id="contentsWrapper" class="flex flex-wrap w-full">
-				<li class="basis-full">
+				<li class="basis-full hover:-translate-y-1 transition">
 					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="flex">
 							<div class="bg-blue-600 px-2 rounded mr-4 text-white ">순서</div>
@@ -48,7 +40,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="basis-1/2">
+				<li class="basis-1/2 hover:-translate-y-1 transition">
 					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="text-center">
 							<p class="text-slate-700">오늘은?</p>
@@ -56,7 +48,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="basis-1/2">
+				<li class="basis-1/2 hover:-translate-y-1 transition">
 					<div class="bg-white p-4 m-2 rounded drop-shadow">
 						<div class="text-center">
 							<p class="text-slate-700">내일은?</p>
@@ -67,6 +59,9 @@
 			</ul>
 		</main>
 	</div>
+
+	<!-- script -->
+	<script src="./js/moment.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 

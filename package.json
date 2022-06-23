@@ -3,6 +3,6 @@
     "tailwindcss": "^3.0.23"
   },
   "scripts": {
-    "start" : "npx tailwindcss -i ./src/input.css -o ./css/index.css --watch"
+    "start" : "npx tailwindcss -i ./css/input.css -o ./css/index.css --watch"
   }
 }
