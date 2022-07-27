@@ -1,7 +1,7 @@
 module.exports = {
-  content: ["popup.html"],
+  content: ['public/index.html'],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
