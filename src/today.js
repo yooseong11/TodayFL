@@ -1,19 +1,13 @@
-const frontlineList = ['제압', '봉바', '쇄빙', '온살'];
-const elementID = {
-  todayFL: 'todayFL',
-  tomorrowFL: 'tomorrowFL',
-  dateInput: 'date',
-};
+import { frontlineList, defalutDate, elementID } from './data.js';
+import * as dayjs from 'dayjs';
 
 const getFLturn = (wantToKnowDay, defaultDay) => {
-  return (FLtrun = Math.abs(
-    defaultDay.diff(wantToKnowDay, 'days') % frontlineList.length
-  ));
+  return Math.abs(defaultDay.diff(wantToKnowDay, 'day') % frontlineList.length);
 };
 
 const getTodayturn = () => {
-  const today = moment();
-  const defalutDay = moment('2022-03-16');
+  const today = dayjs();
+  const defalutDay = dayjs(defalutDate);
 
   return getFLturn(today, defalutDay);
 };
@@ -39,7 +33,7 @@ const changeUI = function (todayFL, tomorrowFL) {
 
 const onChangeDateInput = function (e) {
   const changedDay = e.target.value;
-  const defalutDay = moment('2022-03-16');
+  const defalutDay = dayjs('2022-03-16');
 
   const selectedTurn = getFLturn(changedDay, defalutDay);
   const selectedTmrTrun = getTomorrowTrun(selectedTurn);
@@ -47,11 +41,11 @@ const onChangeDateInput = function (e) {
 };
 
 const init = function () {
-  const today = moment();
+  const today = dayjs();
 
   const initDateInput = function () {
     const dateUI = document.getElementById(elementID.dateInput);
-    dateUI.value = today.format('yyyy-MM-DD');
+    dateUI.value = today.format('YYYY-MM-DD');
     dateUI.addEventListener('change', onChangeDateInput);
   };
   initDateInput();

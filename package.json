@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/meteor-or/TodayFL/issues"
   },
-  "homepage": "https://github.com/meteor-or/TodayFL#readme"
+  "homepage": "https://github.com/meteor-or/TodayFL#readme",
+  "dependencies": {
+    "dayjs": "^1.11.4"
+  }
 }
