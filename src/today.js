@@ -1,4 +1,4 @@
-import { frontlineList, defalutDate, elementID } from './data.js';
+import { frontlineList, defalutDate, elementID } from './data.ts';
 import * as dayjs from 'dayjs';
 
 const getFLturn = (wantToKnowDay, defaultDay) => {

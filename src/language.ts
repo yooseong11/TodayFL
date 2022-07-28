@@ -1,7 +1,7 @@
 
-import { elementID, languages } from './data.js';
+import { elementID, locales } from './data'
 
-const replceText = (el, langType = KoreanConfig) => {
+const replceText = (el: Element, langType : { [key: string]: string; }) => {
   const key = el.textContent;
   el.textContent = langType[key] || key;
 };
@@ -10,9 +10,12 @@ const init = () => {
 	const elements = document.querySelectorAll('[data-i18n]');
 
 	const langUI = document.getElementById(elementID.langMenu);
+
 	langUI.addEventListener('change', (e) => {
-		const currentValue = e.currentTarget.value
-		const langType = languages[currentValue];
+		const target = e.currentTarget as HTMLInputElement;
+		const currentValue = target.value
+
+		const langType = locales[currentValue];
 		elements.forEach((el) => replceText(el, langType));
 	})
 
