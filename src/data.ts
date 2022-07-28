@@ -16,7 +16,7 @@ interface LocalesType  {
 }
 
 export const locales: LocalesType = {
-  "en": {
+  "en-US": {
     "순서": "Rotation",
     "오늘은?": "Today",
     "내일은?": "Tomorrow",
@@ -32,7 +32,7 @@ export const locales: LocalesType = {
     "氷": "Shatter",
     "オンサル": "Onsal"
   },
-  "jp": {
+  "ja-JP": {
     "순서": "順序",
     "오늘은?": "今日",
     "내일은?": "明日",
@@ -48,7 +48,7 @@ export const locales: LocalesType = {
     "Shatter": "氷",
     "Onsal": "オンサル"
   },
-  "kr": {
+  "ko-KR": {
     "Rotation": "순서",
     "Today": "오늘은?",
     "Tomorrow": "내일은?",
