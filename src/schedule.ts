@@ -1,7 +1,16 @@
 import { frontlineList, defalutDate, elementID } from './data';
-import dayjs from 'dayjs';
 
-type dayType = dayjs.Dayjs
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+type dayType = dayjs.Dayjs;
+
+const setTimezone = function () {
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
+  dayjs.tz.setDefault('Asia/Seoul');
+};
 
 const getFLturn = (wantToKnowDay: dayType, defaultDay: dayType) => {
   return Math.abs(defaultDay.diff(wantToKnowDay, 'day') % frontlineList.length);
@@ -36,8 +45,8 @@ const changeUI = function (todayFL: string, tomorrowFL: string) {
 const onChangeDateInput = function (e: Event) {
   const InputTarget = e.currentTarget as HTMLInputElement;
   const changedValue = InputTarget.value;
-  
-  const changedDay = dayjs(changedValue)
+
+  const changedDay = dayjs(changedValue);
   const defalutDay = dayjs('2022-03-16');
 
   const selectedTurn = getFLturn(changedDay, defalutDay);
@@ -46,10 +55,13 @@ const onChangeDateInput = function (e: Event) {
 };
 
 const init = function () {
+  setTimezone();
   const today = dayjs();
 
   const initDateInput = function () {
-    const dateUI = document.getElementById(elementID.dateInput) as HTMLInputElement;
+    const dateUI = document.getElementById(
+      elementID.dateInput
+    ) as HTMLInputElement;
     dateUI.value = today.format('YYYY-MM-DD');
     dateUI.addEventListener('change', onChangeDateInput);
   };
