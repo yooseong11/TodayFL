@@ -9,53 +9,55 @@
 </head>
 
 <body>
-	<div id="wrapper" class="box-border bg-slate-200 p-4 text-base w-[450px]" >
-		<header id="header" class="mb-4">
-			<div class="px-4 flex justify-between items-center">
-				<input id="date" type="date" class="text-sm text-slate-700 bg-transparent" />
-				<select id="languages-menu">
-					<option value="kr">한국어</option>
-					<option value="en">English (US)</option>
-					<option value="jp">日本語</option>
-				</select>
-			</div>
-		</header>
-		<main id="main" class="select-none">
-			<ul id="contentsWrapper" class="flex flex-wrap">
-				<li class="basis-full hover:-translate-y-1 transition">
-					<div class="bg-white p-4 m-2 rounded drop-shadow">
-						<div class="flex">
-							<div data-i18n class="bg-blue-600 px-2 rounded mr-4 text-white">순서</div>
-							<ul id="FLlist" class="flex">
-								<li data-i18n>제압</li>
-								<li class="mr-2"> →</li>
-								<li data-i18n>봉바</li>
-								<li class="mr-2"> →</li>
-								<li data-i18n>쇄빙</li>
-								<li class="mr-2"> →</li>
-								<li data-i18n>온살</li>
-							</ul>
+	<div id="wrapper" class="box-border bg-slate-200 p-4 ">
+		<div class="text-base w-[450px] m-auto">
+			<header id="header" class="mb-4">
+				<div class="px-4 flex justify-between items-center">
+					<input id="date" type="date" class="text-sm text-slate-700 bg-transparent" />
+					<select id="languages-menu">
+						<option value="kr">한국어</option>
+						<option value="en">English (US)</option>
+						<option value="jp">日本語</option>
+					</select>
+				</div>
+			</header>
+			<main id="main" class="select-none">
+				<ul id="contentsWrapper" class="flex flex-wrap">
+					<li class="basis-full hover:-translate-y-1 transition">
+						<div class="bg-white p-4 m-2 rounded drop-shadow">
+							<div class="flex">
+								<div data-i18n class="bg-blue-600 px-2 rounded mr-4 text-white">순서</div>
+								<ul id="FLlist" class="flex">
+									<li data-i18n>제압</li>
+									<li class="mr-2"> →</li>
+									<li data-i18n>봉바</li>
+									<li class="mr-2"> →</li>
+									<li data-i18n>쇄빙</li>
+									<li class="mr-2"> →</li>
+									<li data-i18n>온살</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-				</li>
-				<li class="basis-1/2 hover:-translate-y-1 transition">
-					<div class="bg-white p-4 m-2 rounded drop-shadow">
-						<div class="text-center">
-							<p data-i18n class="text-slate-700">오늘은?</p>
-							<p data-i18n id="todayFL" class="text-xl text-blue-600 font-bold"></p>
+					</li>
+					<li class="basis-1/2 hover:-translate-y-1 transition">
+						<div class="bg-white p-4 m-2 rounded drop-shadow">
+							<div class="text-center">
+								<p data-i18n class="text-slate-700">오늘은?</p>
+								<p data-i18n id="todayFL" class="text-xl text-blue-600 font-bold"></p>
+							</div>
 						</div>
-					</div>
-				</li>
-				<li class="basis-1/2 hover:-translate-y-1 transition">
-					<div class="bg-white p-4 m-2 rounded drop-shadow">
-						<div class="text-center">
-							<p data-i18n class="text-slate-700">내일은?</p>
-							<p data-i18n id="tomorrowFL" class="text-xl"></p>
+					</li>
+					<li class="basis-1/2 hover:-translate-y-1 transition">
+						<div class="bg-white p-4 m-2 rounded drop-shadow">
+							<div class="text-center">
+								<p data-i18n class="text-slate-700">내일은?</p>
+								<p data-i18n id="tomorrowFL" class="text-xl"></p>
+							</div>
 						</div>
-					</div>
-				</li>
-			</ul>
-		</main>
+					</li>
+				</ul>
+			</main>
+		</div>
 	</div>
 </body>
 
