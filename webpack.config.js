@@ -17,8 +17,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
+      }, {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
 };
