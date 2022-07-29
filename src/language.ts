@@ -16,14 +16,17 @@ const getLangType = function (langCode: string) {
 
 const init = () => {
 	const elements = document.querySelectorAll('[data-i18n]');
+	const langUI = document.getElementById(elementID.langMenu) as HTMLInputElement;
 
 	const setBrowserLang = function() {
 		const browserLanguage = getLanguage();
+		langUI.value = browserLanguage;
+		
 		elements.forEach((el) => replceText(el, getLangType(browserLanguage)));
 	};
 	setBrowserLang();
+
 	const onChangeEvnet = function () {
-		const langUI = document.getElementById(elementID.langMenu);
 
 		langUI.addEventListener('change', (e) => {
 			const target = e.currentTarget as HTMLInputElement;

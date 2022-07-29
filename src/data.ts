@@ -32,7 +32,23 @@ export const locales: LocalesType = {
     "氷": "Shatter",
     "オンサル": "Onsal"
   },
-  "ja-JP": {
+  "en": {
+    "순서": "Rotation",
+    "오늘은?": "Today",
+    "내일은?": "Tomorrow",
+    "제압": "Secure",
+    "봉바": "Seize",
+    "쇄빙": "Shatter",
+    "온살": "Onsal",
+    "順序": "Rotation",
+    "今日": "Today",
+    "明日": "Tomorrow",
+    "制圧": "Secure",
+    "シルロ": "Seize",
+    "氷": "Shatter",
+    "オンサル": "Onsal"
+  },
+  "ja": {
     "순서": "順序",
     "오늘은?": "今日",
     "내일은?": "明日",
@@ -48,7 +64,7 @@ export const locales: LocalesType = {
     "Shatter": "氷",
     "Onsal": "オンサル"
   },
-  "ko-KR": {
+  "ko": {
     "Rotation": "순서",
     "Today": "오늘은?",
     "Tomorrow": "내일은?",
