@@ -493,6 +493,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 450px;
 }
 
+.w-\[440px\] {
+  width: 440px;
+}
+
+.w-\[420px\] {
+  width: 420px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
 .basis-full {
   flex-basis: 100%;
 }
