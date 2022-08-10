@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Today's Frontline",
+    "description": "The description of the extension, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "Final Fantasy 14 pvp frontline schedule",
+    "description": "The description of the extension, displayed in the web store."
+  }
+}

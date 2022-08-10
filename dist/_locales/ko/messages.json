@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "파판 14 | 오늘 전장",
+    "description": "The description of the extension, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "파이널 판타지 14 pvp 전장 일정을 알려줍니다.",
+    "description": "The description of the extension, displayed in the web store."
+  }
+}
