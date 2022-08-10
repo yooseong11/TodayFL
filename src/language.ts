@@ -6,8 +6,16 @@ const replceText = (el: Element, langType : { [key: string]: string; }) => {
   el.textContent = langType[key] || key;
 };
 
-const getLanguage = function() {
-  return navigator.language
+const getBrowserLanguage = function() {
+	const browserLanguage = navigator.language
+	let settingLanguage = browserLanguage 
+	if (browserLanguage === "en-US") {
+		settingLanguage = "en"
+	}
+	if (browserLanguage === "ko-KR") {
+		settingLanguage = "ko"
+	}
+	return settingLanguage
 }
 
 const getLangType = function (langCode: string) {
@@ -19,7 +27,8 @@ const init = () => {
 	const langUI = document.getElementById(elementID.langMenu) as HTMLInputElement;
 
 	const setBrowserLang = function() {
-		const browserLanguage = getLanguage();
+		const browserLanguage = getBrowserLanguage();
+		
 		langUI.value = browserLanguage;
 		
 		elements.forEach((el) => replceText(el, getLangType(browserLanguage)));
