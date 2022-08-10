@@ -6,7 +6,7 @@ const replceText = (el: Element, langType : { [key: string]: string; }) => {
   el.textContent = langType[key] || key;
 };
 
-const getBrowserLanguage = function() {
+export const getBrowserLanguage = function() {
 	const browserLanguage = navigator.language
 	let settingLanguage = browserLanguage 
 	if (browserLanguage === "en-US") {

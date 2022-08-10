@@ -1,5 +1,4 @@
 import { frontlineList, defalutDate, elementID } from './data';
-
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -13,7 +12,7 @@ const setTimezone = function () {
 };
 
 const getFLturn = (wantToKnowDay: dayType, defaultDay: dayType) => {
-  return Math.abs(defaultDay.diff(wantToKnowDay, 'day') % frontlineList.length);
+  return Math.abs(defaultDay.diff(wantToKnowDay, 'day') % frontlineList.ko.length);
 };
 
 const getTodayturn = () => {
@@ -26,7 +25,7 @@ const getTodayturn = () => {
 const getTomorrowTrun = (defaultTurn: number) => {
   let tomorrowTurn = defaultTurn + 1;
 
-  if (tomorrowTurn > frontlineList.length - 1) {
+  if (tomorrowTurn > frontlineList.ko.length - 1) {
     tomorrowTurn = 0;
   }
 
@@ -34,7 +33,9 @@ const getTomorrowTrun = (defaultTurn: number) => {
 };
 
 const getFLName = (int: number) => {
-  return frontlineList[int];
+  const selecteLangMenu = document.getElementById(elementID.langMenu) as HTMLInputElement
+  const selectedLangType = selecteLangMenu.value
+  return frontlineList[selectedLangType][int];
 };
 
 const changeUI = function (todayFL: string, tomorrowFL: string) {

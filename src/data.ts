@@ -1,5 +1,13 @@
-export const frontlineList = ['제압', '봉바', '쇄빙', '온살'];
+export const frontlineList: FLType = {
+  "ko": ['제압', '봉바', '쇄빙', '온살'],
+  "en": ["Secure", "Seize", "Shatter", "Onsal"],
+  "ja": ["制圧", "シルロ", "氷", "オンサル"]
+}
 
+interface FLType  {
+  [key: string]: string[
+  ]
+}
 export const elementID = {
   todayFL: "todayFL",
   tomorrowFL: "tomorrowFL",
