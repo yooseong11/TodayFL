@@ -7,6 +7,12 @@
 
 [크롬 확장프로그램 오늘 전장](https://chrome.google.com/webstore/detail/%EC%98%A4%EB%8A%98-%EC%A0%84%EC%9E%A5/eohfbgfljglffaofibdphglklbeffkig?hl=ko&authuser=0)
 
+## Start
+
+```
+npm run start
+```
+
 ## 개요
 
 파이널 판타지 14 PVP에서 매일 바뀌는 전장 맵을 알려줍니다.
