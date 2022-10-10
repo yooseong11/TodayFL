@@ -23,18 +23,18 @@
   "name": "todayfl",
   "description": "**개인 프로젝트 | 2022.03 (일주일)**",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meteor-or/TodayFL.git"
+    "url": "git+https://github.com/yuseong11/TodayFL.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meteor-or/TodayFL/issues"
+    "url": "https://github.com/yuseong11/TodayFL/issues"
   },
-  "homepage": "https://github.com/meteor-or/TodayFL#readme",
+  "homepage": "https://github.com/yuseong11/TodayFL#readme",
   "dependencies": {
     "dayjs": "^1.11.4"
   }
