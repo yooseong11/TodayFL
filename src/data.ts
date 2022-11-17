@@ -15,7 +15,7 @@ export const elementID = {
   langMenu:"languages-menu"
 };
 
-export const defalutDate = '2022-03-16';
+export const defalutDate = '2022-03-16'; // 쇄빙
 
 interface LocalesType  {
   [key: string]: {
