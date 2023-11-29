@@ -15,7 +15,7 @@ export const elementID = {
   langMenu:"languages-menu"
 };
 
-export const defalutDate = '2022-03-16'; // 제압
+export const defalutDate = '2023-11-03'; // 제압
 
 interface LocalesType  {
   [key: string]: {

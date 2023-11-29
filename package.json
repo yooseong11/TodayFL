@@ -20,10 +20,10 @@
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "text": "npx cypress open"
+    "test": "npx cypress open"
   },
   "name": "todayfl",
-  "description": "**개인 프로젝트 | 2022.03 (일주일)**",
+  "description": "**개인 프로젝트 **",
   "version": "1.0.0",
   "main": "index.html",
   "repository": {
