@@ -1,5 +1,5 @@
 export const frontlineList: FLType = {
-  "ko": ['제압', '봉바', '쇄빙', '온살'],
+  "ko": ['봉바', '쇄빙', '온살'],
   "en": ["Secure", "Seize", "Shatter", "Onsal"],
   "ja": ["制圧", "シルロ", "氷", "オンサル"]
 }
@@ -15,7 +15,7 @@ export const elementID = {
   langMenu:"languages-menu"
 };
 
-export const defalutDate = '2023-11-03'; // 제압
+export const defalutDate = '2023-11-01'; // 봉바
 
 interface LocalesType  {
   [key: string]: {

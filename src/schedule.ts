@@ -11,6 +11,7 @@ const setTimezone = function () {
   dayjs.tz.setDefault('Asia/Seoul');
 };
 
+// 전장 순서 구하기
 const getFLturn = (wantToKnowDay: dayType, defaultDay: dayType) => {
   return Math.abs(defaultDay.diff(wantToKnowDay, 'day') % frontlineList.ko.length);
 };
@@ -48,7 +49,7 @@ const onChangeDateInput = function (e: Event) {
   const changedValue = InputTarget.value;
 
   const changedDay = dayjs(changedValue);
-  const defalutDay = dayjs('2022-03-16');
+  const defalutDay = dayjs(defalutDate);
 
   const selectedTurn = getFLturn(changedDay, defalutDay);
   const selectedTmrTrun = getTomorrowTrun(selectedTurn);
